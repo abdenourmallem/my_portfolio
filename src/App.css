@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Navbar links */
+:root {
+  text-align: center;
+  color: #6b6375;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  font-size: 18px;
+}
+
+nav {
+  background-color: #1a6fc4;
+  overflow: hidden;
+  height: 35px;
+  padding: 10px;
+}
+
+a {
+  color: #ffd700;
+  font-weight: 700;
+  text-decoration: none;
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Hero title "Welcome to My Portfolio" */
+h1 {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+
+
+/* Section title "Skills overview" */
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+
+
+/* Card title (Frontend, backend, DataAnalysis) */
+h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Card content */
+p {
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #1a6fc4;
+}
+
+ul li {
+  float: right;
+}
+
+ul li a {
+  padding: 16px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  height: auto;
+  color: #6b6375;
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Control card icons separately */
+.card img {
+  width: 55px;
+  height: 55px;
+}
+
+.greeting-section {
+  padding: 2%;
+  background-color: dodgerblue;
+  color: white;
+  text-align: start;
+}
+
+.greeting-section div:last-child {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  margin-left: 16px;
+}
+
+.greeting-section p {
+  font-size: 19px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 25%;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 3%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  margin-top: 5%;
+}
+
+.skills-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.skills-container p::before {
+  content: '✔ ';
+  color: #28a745;
+  font-weight: 700;
+}
+
+.skills-container p {
+  text-align: left;
+
+}
+
+.projects-container {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 30%;
+  height: 200px;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background: white;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  color: #333;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front img {
+  max-width: 70%;
+  max-height: 70%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tools-container span {
+  background-color: rgba(30, 143, 255, 0.8);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.footer {
+  background-color: #1a6fc4;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  font-size: 13px;
+  opacity: 0.7;
+}
