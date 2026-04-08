@@ -7,7 +7,6 @@ function SkillsSection() {
         <>
             <h1>Skills overview</h1>
             <p>Here are some of the key skills and technologies I have experience with:</p>
-            <a href="">checkout my resume online</a>
             <div className="flex-container skills-container">
                 <div className="card">
                     <div className="container">

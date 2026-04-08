@@ -1,14 +1,15 @@
 import React, { use } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 function Navbar() {
   navigation = useNavigate();
   return (
     <>
-      <nav>
+      <nav className='navbar'>
         <ul>
-          <li><a onClick={() => navigation('/')}>About</a></li>
-          <li><a onClick={() => navigation('/resumePage')}>Resume</a></li>
-          <li><a onClick={() => navigation('/contactPage')}>Contact</a></li>
+          <li><NavLink to="/">About</NavLink></li>
+          <li><NavLink to="/resumePage">Resume</NavLink></li>
+          <li><NavLink to="/projectsPage">Projects</NavLink></li>
         </ul>
       </nav>
     </>
