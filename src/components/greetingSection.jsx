@@ -1,4 +1,4 @@
-import Me from '../assets/me.png';
+import Me from '../assets/me.jpg';
 import { useNavigate } from 'react-router-dom';
 const Greeting = "Hello, My name is";
 const FullName = "Abdennour Mallem";
