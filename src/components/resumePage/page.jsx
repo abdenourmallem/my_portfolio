@@ -13,19 +13,19 @@ function ResumePage() {
                 <h3>{cvData.phone} | {cvData.email}</h3>
             </div>
             <div className='resume-section'>
-                <h3 className='section-title'>Profissional Experience</h3>
+                <h3 className='section-title'>Professional Experience</h3>
                 <hr />
-                {cvData.experience.map((exp) => (<div key={exp.id} classname='section-item'>
+                {cvData.experience.map((exp) => (<div key={exp.id} className='section-item'>
                     <h3>{exp.company} </h3>
                     <div className='details'>
                         <div className='title-date'>
                             <p className='title' >{exp.title}</p>
                             <p className='date-section'>{exp.date}</p>
                         </div>
-
-                        {exp.bullets.map((bullet, index) => (<ul key={index} className='bullets-list'>
-                            <li>{bullet}</li>
-                        </ul>))}
+                        <ul className='bullets-list'>
+                            {exp.bullets.map((bullet, index) => (
+                                <li key={index}>{bullet}</li>
+                            ))}</ul>
                     </div>
 
                 </div>))}
@@ -33,7 +33,7 @@ function ResumePage() {
             <div className='resume-section'>
                 <h3 className='section-title'>Education</h3>
                 <hr />
-                {cvData.education.map((edu) => (<div key={edu.id} classname='section-item'>
+                {cvData.education.map((edu) => (<div key={edu.id} className='section-item'>
                     <h3>{edu.school} </h3>
                     <div className='details title-date'>
                         <p className='title'>{edu.title}</p>
@@ -61,7 +61,7 @@ function ResumePage() {
             <div className='resume-section'>
                 <h3 className='section-title'>Projects</h3>
                 <hr />
-                {cvData.projects.map((project) => (<div key={project.id} classname='section-item'>
+                {cvData.projects.map((project) => (<div key={project.id} className='section-item'>
                     <h3>{project.title}</h3>
                     <div className='details'>
                         <p>{project.description}</p>

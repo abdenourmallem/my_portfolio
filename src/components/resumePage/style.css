@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 /* GENERAL BODY STYLING */
 body {
     font-family: 'Poppins', sans-serif;
@@ -25,6 +27,25 @@ hr {
     border-radius: 10px;
 }
 
+/* PERSONAL INFO */
+.personal-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.personal-info h1 {
+    font-size: 32px;
+    margin-bottom: 6px;
+    color: #1a1a1a;
+}
+
+.personal-info h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    margin: 4px 0;
+}
+
 /* RESUME SECTION */
 .resume-section {
     margin-top: 20px;
@@ -46,33 +67,50 @@ hr {
     margin-left: 20px;
 }
 
+/* COMPANY / SCHOOL NAME */
+.resume-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0 4px;
+    color: #1a1a1a;
+}
+
 /* TITLE AND DATE */
 .title-date {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 4px;
     margin-bottom: 5px;
 }
 
 .title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     margin: 0;
+    color: #333;
 }
 
 .date-section {
-    font-size: 14px;
+    font-size: 13px;
     font-style: italic;
-    color: #555;
+    color: #777;
     margin: 0;
+    white-space: nowrap;
 }
 
 /* BULLETS LIST */
 .bullets-list {
     list-style: disc;
     padding-left: 20px;
-    margin: 10px 0;
+    margin: 6px 0;
+}
+
+.bullets-list li {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 4px;
 }
 
 /* SKILLS */
@@ -82,24 +120,29 @@ hr {
     gap: 8px;
     margin-bottom: 10px;
     flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
 }
 
 .skill-item li {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .skill-item h4 {
     margin: 0;
-    font-weight: 500;
+    font-weight: 600;
     white-space: nowrap;
     color: #1a6fc4;
+    font-size: 15px;
 }
 
 .skill-item p {
     margin: 0;
     color: #555;
+    font-size: 15px;
 }
 
 /* TOOL BADGES */
@@ -114,38 +157,32 @@ hr {
     font-size: 14px;
 }
 
-/* RESPONSIVE MEDIA QUERIES */
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+
+/* Tablet */
 @media (max-width: 768px) {
     .resume-container {
-        margin: 5% 3%;
-        padding: 3%;
+        margin: 4% 3%;
+        padding: 5%;
+        border-radius: 8px;
+    }
+
+    .personal-info h1 {
+        font-size: 26px;
+    }
+
+    .personal-info h3 {
+        font-size: 14px;
     }
 
     .section-title {
         font-size: 20px;
     }
 
-    .title {
+    .resume-section h3 {
         font-size: 16px;
-    }
-
-    .date-section {
-        font-size: 12px;
-    }
-
-    .tool-badge {
-        font-size: 13px;
-        padding: 5px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .resume-container {
-        padding: 2%;
-    }
-
-    .section-title {
-        font-size: 18px;
     }
 
     .title {
@@ -153,15 +190,108 @@ hr {
     }
 
     .date-section {
+        font-size: 12px;
+    }
+
+    .bullets-list li {
+        font-size: 14px;
+    }
+
+    .skill-item h4 {
+        font-size: 14px;
+    }
+
+    .skill-item p {
+        font-size: 14px;
+    }
+
+    .tool-badge {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .details {
+        margin-left: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .resume-container {
+        margin: 0;
+        padding: 6% 5%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .personal-info h1 {
+        font-size: 22px;
+    }
+
+    .personal-info h3 {
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .resume-section h3 {
+        font-size: 15px;
+    }
+
+    /* stack title and date vertically on small screens */
+    .title-date {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .date-section {
         font-size: 11px;
     }
 
     .bullets-list {
-        padding-left: 15px;
+        padding-left: 14px;
+    }
+
+    .bullets-list li {
+        font-size: 13px;
+    }
+
+    .skill-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .skill-item li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skill-item h4 {
+        font-size: 13px;
+    }
+
+    .skill-item p {
+        font-size: 13px;
     }
 
     .tool-badge {
         font-size: 12px;
         padding: 4px 8px;
+    }
+
+    .details {
+        margin-left: 0;
+    }
+
+    hr {
+        margin: 12px 0;
     }
 }
